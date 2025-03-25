@@ -1,0 +1,34 @@
+<!-- client/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Service</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Product Service</h1>
+
+    <div>
+        <h2>Get Product by ID</h2>
+        <form id="get-product-form">
+            <input type="number" id="product-id" placeholder="Enter product ID" required>
+            <button type="submit">Get Product</button>
+        </form>
+        <p id="get-product-result"></p>
+    </div>
+
+    <div>
+        <h2>Insert Product</h2>
+        <form id="insert-product-form">
+            <input type="text" id="product-name" placeholder="Product Name" required>
+            <input type="number" id="product-price" placeholder="Product Price" required>
+            <button type="submit">Insert Product</button>
+        </form>
+        <p id="insert-product-result"></p>
+    </div>
+
+    <script src="/client.js"></script>
+</body>
+</html>

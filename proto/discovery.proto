@@ -1,0 +1,22 @@
+// proto/discovery.proto
+syntax = "proto3";
+
+package discovery;
+
+service DiscoveryService {
+    rpc RegisterService (ServiceRegistration) returns (ServiceResponse);
+    rpc DiscoverService (ServiceRequest) returns (ServiceResponse);
+}
+
+message ServiceRegistration {
+    string service_name = 1;
+    string address = 2;
+}
+
+message ServiceRequest {
+    string service_name = 1;
+}
+
+message ServiceResponse {
+    string address = 1;
+}
